@@ -26,7 +26,7 @@ class RobotsMiddleware
         throw InvalidIndexRule::requiresBooleanOrString();
     }
 
-    protected function responseWithRobots(string $contents)
+    protected function responseWithRobots($contents)
     {
         $this->response->headers->set('x-robots-tag', $contents, false);
 
